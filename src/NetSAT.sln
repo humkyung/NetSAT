@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33529.622
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetSAT", "NetSAT.csproj", "{F523C85D-756B-4DE1-BE6E-906310FDCBFE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F523C85D-756B-4DE1-BE6E-906310FDCBFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F523C85D-756B-4DE1-BE6E-906310FDCBFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F523C85D-756B-4DE1-BE6E-906310FDCBFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F523C85D-756B-4DE1-BE6E-906310FDCBFE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2433AE1D-B749-4F86-BBBB-54E2E9DCCE23}
+	EndGlobalSection
+EndGlobal
