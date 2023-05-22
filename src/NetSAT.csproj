@@ -41,6 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AcisFile.cs" />
+    <Compile Include="AcisDoc.cs" />
+    <Compile Include="AcisBody.cs" />
+    <Compile Include="AcisEntity.cs" />
     <Compile Include="NetSATLib.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

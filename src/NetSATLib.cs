@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace NetSAT
 {
-    public class NetSATLib
+    public class AcisLib 
     {
+        public static string Delimiter { get; set; }
     }
 }

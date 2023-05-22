@@ -1,0 +1,24 @@
+using System.Collections.Generic;
+
+namespace NetSAT
+{
+	class AcisEntity
+	{
+		public AcisEntity(string type, long index) 
+		{
+			Type = type;
+			Index = index;
+		}
+
+		~AcisEntity()
+		{
+
+		}
+
+		public virtual bool Parse(AcisDoc doc, string str) { return true; }
+
+		public string Type { get; set; }
+		public long Index { get; set; }
+		public long SubTypeRefIndex { get; set; }
+	}
+}
