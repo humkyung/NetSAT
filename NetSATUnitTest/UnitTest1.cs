@@ -10,7 +10,8 @@ namespace NetSATUnitTest
         public void TestMethod1()
         {
             var acisdoc = new NetSAT.AcisDoc();
-            acisdoc.Read(@"g:\Projects\NetSAT\Docs\rh.sat");
+            string directory = AppDomain.CurrentDomain.BaseDirectory;
+            acisdoc.Read(@"..\..\..\Docs\rh.sat");
         }
     }
 }

@@ -24,6 +24,7 @@ namespace NetSAT
 					{
 						string ele = acis.ReadElement(reader);
 						if (string.IsNullOrEmpty(ele)) break;
+						AcisEntity ent = acis.ParseElement(ele);
 
 					} while (true);
 				}

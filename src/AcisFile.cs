@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 
 namespace NetSAT
@@ -70,6 +71,30 @@ namespace NetSAT
 			}
 
 			return -1;
+		}
+
+		/// <summary>
+		/// parse given data from sat file.
+		/// </summary>
+		/// <param name="data"></param>
+		/// <returns></returns>
+		public AcisEntity ParseElement(string data)
+		{
+			Debug.Assert(!string.IsNullOrEmpty(data));
+
+			AcisEntity res = null;
+
+			if (!string.IsNullOrEmpty(data))
+			{
+				string[] tokens = data.Split(new char[] { ' ', '\t' });
+				if (tokens.Length > 0)
+				{
+					res = AcisEntityFactory.Instance.CreateEntity(tokens[0], EntIndex);
+					if(res != null) res.Parse(AcisDoc, data);
+				}
+			}
+
+			return res;
 		}
 
 		private AcisDoc AcisDoc { get; set; }

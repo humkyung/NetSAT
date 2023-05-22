@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AcisEntityFactor.cs" />
     <Compile Include="AcisFile.cs" />
     <Compile Include="AcisDoc.cs" />
     <Compile Include="AcisBody.cs" />

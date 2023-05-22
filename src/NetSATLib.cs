@@ -8,6 +8,6 @@ namespace NetSAT
 {
     public class AcisLib 
     {
-        public static string Delimiter { get; set; }
+        public static string Delimiter { get; } = " \t";
     }
 }

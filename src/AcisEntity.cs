@@ -15,6 +15,7 @@ namespace NetSAT
 
 		}
 
+		public virtual bool IsKindOf(string type) { return false; }
 		public virtual bool Parse(AcisDoc doc, string str) { return true; }
 
 		public string Type { get; set; }
