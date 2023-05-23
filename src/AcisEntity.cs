@@ -20,6 +20,6 @@ namespace NetSAT
 
 		public string Type { get; set; }
 		public long Index { get; set; }
-		public long SubTypeRefIndex { get; set; }
+		public long SubTypeRefIndex { get; protected set; }
 	}
 }

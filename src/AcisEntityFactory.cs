@@ -84,6 +84,14 @@ namespace NetSAT
 			{
 				res = new AcisExppcCurve(Type, Index);
 			}
+			else if (AcisPlaneSurf.TypeOf(Type))
+			{ /// "plane-surface"
+				res = new AcisPlaneSurf(Type, Index);
+			}
+			else if (AcisRefEntity.TypeOf(Type))
+			{
+				res = new AcisRefEntity(Type, Index);
+			}
 
 			return res;
         }

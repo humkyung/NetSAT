@@ -43,6 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AcisCurve.cs" />
+    <Compile Include="AcisPlaneSurf.cs" />
+    <Compile Include="AcisSurf.cs" />
+    <Compile Include="AcisRefEntity.cs" />
     <Compile Include="AcisExppcCurve.cs" />
     <Compile Include="AcisExactCurve.cs" />
     <Compile Include="AcisPCurve.cs" />
