@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AcisEllipseCurve.cs" />
+    <Compile Include="AcisEntityFactory.cs" />
     <Compile Include="AcisStraightCurve.cs" />
     <Compile Include="AcisEdge.cs" />
     <Compile Include="AcisEnum.cs" />
@@ -51,7 +52,6 @@
     <Compile Include="AcisFace.cs" />
     <Compile Include="AcisShell.cs" />
     <Compile Include="AcisLump.cs" />
-    <Compile Include="AcisEntityFactor.cs" />
     <Compile Include="AcisFile.cs" />
     <Compile Include="AcisDoc.cs" />
     <Compile Include="AcisBody.cs" />
