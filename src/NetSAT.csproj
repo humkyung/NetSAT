@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,6 +42,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AcisEllipseCurve.cs" />
+    <Compile Include="AcisStraightCurve.cs" />
+    <Compile Include="AcisEdge.cs" />
+    <Compile Include="AcisEnum.cs" />
+    <Compile Include="AcisCoEdge.cs" />
+    <Compile Include="AcisLoop.cs" />
+    <Compile Include="AcisFace.cs" />
+    <Compile Include="AcisShell.cs" />
+    <Compile Include="AcisLump.cs" />
     <Compile Include="AcisEntityFactor.cs" />
     <Compile Include="AcisFile.cs" />
     <Compile Include="AcisDoc.cs" />

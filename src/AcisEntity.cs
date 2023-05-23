@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace NetSAT
 {
-	class AcisEntity
+	public class AcisEntity
 	{
 		public AcisEntity(string type, long index) 
 		{

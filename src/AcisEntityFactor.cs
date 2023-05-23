@@ -22,6 +22,12 @@ namespace NetSAT
 
 		}
 
+		/// <summary>
+		/// create a acis entity according to given Type
+		/// </summary>
+		/// <param name="Type"></param>
+		/// <param name="Index"></param>
+		/// <returns></returns>
 		public AcisEntity CreateEntity(string Type, long Index)
         {
 			AcisEntity res = null;
@@ -30,6 +36,38 @@ namespace NetSAT
             {
 				res = new AcisBody(Type, Index);
             }
+			else if (AcisLump.TypeOf(Type))
+			{
+				res = new AcisLump(Type, Index);
+			}
+			else if (AcisShell.TypeOf(Type))
+			{
+				res = new AcisShell(Type, Index);
+			}
+			else if (AcisFace.TypeOf(Type))
+			{
+				res = new AcisFace(Type, Index);
+			}
+			else if (AcisLoop.TypeOf(Type))
+			{
+				res = new AcisLoop(Type, Index);
+			}
+			else if (AcisCoEdge.TypeOf(Type))
+			{
+				res = new AcisCoEdge(Type, Index);
+			}
+			else if (AcisEdge.TypeOf(Type))
+			{
+				res = new AcisEdge(Type, Index);
+			}
+			else if (AcisStraightCurve.TypeOf(Type))
+			{
+				res = new AcisStraightCurve(Type, Index);
+			}
+			else if (AcisEllipseCurve.TypeOf(Type))
+			{
+				res = new AcisEllipseCurve(Type, Index);
+			}
 
 			return res;
         }
