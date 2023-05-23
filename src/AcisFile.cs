@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Text;
 
 namespace NetSAT
 {
@@ -16,16 +17,21 @@ namespace NetSAT
 
 		}
 
+		/// <summary>
+		/// read string for acis element from stream.
+		/// </summary>
+		/// <param name="reader"></param>
+		/// <returns></returns>
 		public string ReadElement(StreamReader reader)
 		{
-			string res = string.Empty;
+			StringBuilder sb = new StringBuilder();
 
 			bool bGotEntIndex = false;
 			do
 			{
 				string aLine = reader.ReadLine();
-				if (ACIS_END_OF_FILE == aLine) return res;
-				if ((res.Length == 0) && ('-' == aLine[0]))
+				if (ACIS_END_OF_FILE == aLine) return sb.ToString();
+				if ((sb.Length == 0) && ('-' == aLine[0]))
 				{
 					int i = 1;
 					for (i = 1; i < aLine.Length; ++i)
@@ -34,17 +40,16 @@ namespace NetSAT
 					}
 					EntIndex = System.Convert.ToInt32(aLine.Substring(1, i - 1));
 					bGotEntIndex = true;
-					aLine = aLine.Substring(i);
-					aLine = aLine.Trim();
+					aLine = aLine.Substring(i).Trim();
 				}
 
-				res += aLine;
+				if(sb.Length == 0) { sb.Append(aLine); } else { sb.Append(System.Environment.NewLine); sb.Append(aLine);  }
 				if (-1 != aLine.IndexOf(ACIS_END_MARK)) break;
 			} while (!reader.EndOfStream);
 
 			if (!bGotEntIndex) EntIndex++;
 
-			return res;
+			return sb.ToString();
 		}
 
 		public int ReadHeaderSection(StreamReader reader)

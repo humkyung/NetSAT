@@ -42,6 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AcisCurve.cs" />
+    <Compile Include="AcisExactCurve.cs" />
+    <Compile Include="AcisIntCurve.cs" />
     <Compile Include="AcisEllipseCurve.cs" />
     <Compile Include="AcisEntityFactory.cs" />
     <Compile Include="AcisStraightCurve.cs" />

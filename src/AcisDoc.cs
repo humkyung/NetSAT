@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 
 namespace NetSAT
@@ -35,11 +36,28 @@ namespace NetSAT
 			return -1;
 		}
 
+		/// <summary>
+		/// register subtype entity
+		/// </summary>
+		/// <param name="ent"></param>
+		/// <returns></returns>
+		public long RegisterSubType(AcisEntity ent)
+        {
+			Debug.Assert(ent != null);
+			if(ent != null)
+            {
+				SubTypeHolder.Add(ent);
+				return SubTypeHolder.Count - 1;
+            }
+
+			return -1;
+        }
+
 		public int SATVer { get; set; } = 0;
 		private int NumOfRecords { get; set; } = 0;
 		private int NumOfEntities { get; set; } = 0;
 
 		private Dictionary<long , AcisEntity> AcisEntMap = new Dictionary<long, AcisEntity>();
-		private List<AcisEntity> SubTypeHolder = new List<AcisEntity>();
+		private readonly List<AcisEntity> SubTypeHolder = new List<AcisEntity>();
 	}
 }

@@ -68,6 +68,14 @@ namespace NetSAT
 			{
 				res = new AcisEllipseCurve(Type, Index);
 			}
+			else if (AcisIntCurve.TypeOf(Type))
+			{ /// "intcurve-curve"
+				res = new AcisIntCurve(Type, Index);
+			}
+			else if (AcisExactCurve.TypeOf(Type))
+			{
+				res = new AcisExactCurve(Type, Index);
+			}
 
 			return res;
         }
