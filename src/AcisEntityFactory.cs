@@ -72,9 +72,17 @@ namespace NetSAT
 			{ /// "intcurve-curve"
 				res = new AcisIntCurve(Type, Index);
 			}
+			else if (AcisPCurve.TypeOf(Type))
+			{ /// "pcurve"
+				res = new AcisPCurve(Type, Index);
+			}
 			else if (AcisExactCurve.TypeOf(Type))
 			{
 				res = new AcisExactCurve(Type, Index);
+			}
+			else if (AcisExppcCurve.TypeOf(Type))
+			{
+				res = new AcisExppcCurve(Type, Index);
 			}
 
 			return res;
